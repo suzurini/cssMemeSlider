@@ -71,9 +71,11 @@ img {
 }
 
 .name-site {
+    padding: 20px;
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 0.03em;
+    text-align: center;
 }
 
 .main {
@@ -86,18 +88,35 @@ img {
     overflow: hidden;
 }
 
+.carousel {
+    position: relative;
+}
+
 .meme-carousel {
-    margin-top: 20px;
+    margin: 0px auto;
+    width: 90%;
+    padding: 60px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
 }
 
 .item-carousel {
-    width: 80%;
+    width: 90%;
     height: auto;
     margin: 0px auto;
 }
 
+.hidden {
+    display: none;
+}
+
 .item-carousel__img {
-    width: 80%;
-    height: auto;
     border-radius: 30px;
+}
+
+.desc-slide {
+    padding: 40px 0;
+    font-size: 20px;
+    font-weight: 600;
 }

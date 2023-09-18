@@ -71,11 +71,14 @@ img {
 }
 
 .name-site {
+    width: 340px;
+    margin: 0px auto;
     padding: 20px;
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 0.03em;
     text-align: center;
+    border-bottom: 2px solid #ffffff;
 }
 
 .main {
@@ -95,7 +98,7 @@ img {
 .meme-carousel {
     margin: 0px auto;
     width: 90%;
-    padding: 60px 0px;
+    padding: 40px 0px;
     display: flex;
     flex-direction: row;
     justify-content: stretch;
@@ -107,12 +110,18 @@ img {
     margin: 0px auto;
 }
 
+#slide-2 {
+    position: absolute;
+    margin-left: 110%;
+}
+
 .hidden {
     display: none;
 }
 
 .item-carousel__img {
     border-radius: 30px;
+    height: 600px;
 }
 
 .desc-slide {
@@ -155,4 +164,24 @@ img {
 
 .slider-control-pagination.active::before {
     cursor: default;
+}
+
+@keyframes move-right {
+    from { left: 0px; }
+    to { left: calc(95% * (-1)); }
+}
+
+.transition-right {
+    animation-name: move-right;
+    animation-duration: 3s;
+}
+
+@keyframes move-left {
+    from { left: 0px; }
+    to { left: calc(95%); }
+}
+
+.transition-left {
+    animation-name: move-left;
+    animation-duration: 3s;
 }

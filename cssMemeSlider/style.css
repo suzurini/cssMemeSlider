@@ -121,18 +121,14 @@ img {
     height: 3vh;
     border-radius: 50%;
     background-color: #2070c5;
-    border: 0.2em solid #2070c5;;
+    border: 0.2em solid #2070c5;
     cursor: pointer;
 }
 
-.slider-control-pagination::before {
-    content: '';
-    display: inline-block;
-    width: 4vh;
+.control-area {
+    width: 5vh;
     height: 6vh;
-    margin: -2vh -3vh 4vh;
-    background: transparent;
-    cursor: pointer;
+    margin: -2vh -2vh;
 }
 
 .slider-control-pagination:hover {
@@ -143,9 +139,6 @@ img {
 .slider-control-pagination.active {
     background-color: #0e0e11;
     border: 0.2em solid #2070c5;
-}
-
-.slider-control-pagination.active::before {
     cursor: default;
 }
 

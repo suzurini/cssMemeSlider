@@ -110,6 +110,11 @@ img {
     margin: 0px auto;
 }
 
+#slide-0 {
+    position: absolute;
+    margin-left: -110%;
+}
+
 #slide-2 {
     position: absolute;
     margin-left: 110%;
@@ -178,7 +183,7 @@ img {
 
 @keyframes move-left {
     from { left: 0px; }
-    to { left: calc(95%); }
+    to { left: calc(105%); }
 }
 
 .transition-left {

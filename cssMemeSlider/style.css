@@ -137,7 +137,7 @@ img {
 
 .pagination {
     position: relative;
-    margin: -119px 60px;
+    margin: -101px 60px;
     width: 250px;
     float: right;
 }
@@ -156,10 +156,15 @@ img {
     content: '';
     display: inline-block;
     width: 30px;
-    height: 30px;
-    margin: -10px -18px;
+    height: 40px;
+    margin: -12px -18px 20px;
     background: transparent;
     cursor: pointer;
+}
+
+.slider-control-pagination:hover {
+    background-color: #f5f5f5;
+    border-color: #f5f5f5;
 }
 
 .slider-control-pagination.active {

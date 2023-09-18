@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="description" content="Meme Slider">
     <link rel="icon" href="./assets/favicon.ico">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme Slider</title>
 </head>
@@ -16,47 +17,67 @@
         <section class="section meme-slider">
             <div class="slider-wrapper">
                 <div class="meme-carousel carousel" id="carousel">
+                    <div class="item-carousel" id="slide-0">
+                        <img src="./assets/meme-1.jpeg" alt="Разработчик-тестировщик" class="item-carousel__img">
+                        <figcaption class="desc-slide">Разработчик vs тестировщик</figcaption>
+                    </div>
                     <div class="item-carousel" id="slide-1">
-                        <img src="./assets/meme-1.jpeg" alt="День программиста" class="item-carousel__img">
-                        <figcaption class="desc-slide">День программиста</figcaption>
+                        <img src="./assets/meme-1.jpeg" alt="Разработчик-тестировщик" class="item-carousel__img">
+                        <figcaption class="desc-slide">Разработчик vs тестировщик</figcaption>
                     </div>
-                    <div class="item-carousel hidden" id="slide-2">
-                        <img src="./assets/meme-2.jpeg" alt="Не работает - работает" class="item-carousel__img">
-                        <figcaption class="desc-slide">Загадка века</figcaption>
-                    </div>
-                    <div class="item-carousel hidden" id="slide-3">
-                        <img src="./assets/meme-3.jpeg" alt="Разработчик-тестировщик" class="item-carousel__img">
-                        <figcaption class="desc-slide">Разработчик vs Тестировщик</figcaption>
-                    </div>
-                    <div class="item-carousel hidden" id="slide-4">
-                        <img src="./assets/meme-4.jpeg" alt="Пользователи" class="item-carousel__img">
+                    <div class="item-carousel" id="slide-2">
+                        <img src="./assets/meme-2.jpeg" alt="Пользователи" class="item-carousel__img">
                         <figcaption class="desc-slide">Разработчики vs Пользователи</figcaption>
                     </div>
-                    <div class="item-carousel hidden" id="slide-5">
-                        <img src="./assets/meme-5.jpeg" alt="Лампочка-1" class="item-carousel__img">
+                    <div class="item-carousel hidden" id="slide-3">
+                        <img src="./assets/meme-3.jpeg" alt="Лампочка-1" class="item-carousel__img">
                         <figcaption class="desc-slide">Лампочка-1</figcaption>
                     </div>
-                    <div class="item-carousel hidden" id="slide-6">
-                        <img src="./assets/meme-6.jpeg" alt="Лампочка-2" class="item-carousel__img">
+                    <div class="item-carousel hidden" id="slide-4">
+                        <img src="./assets/meme-4.jpeg" alt="Лампочка-2" class="item-carousel__img">
                         <figcaption class="desc-slide">Лампочка-2</figcaption>
                     </div>
-
-                    <div class="item-carousel hidden"  id="slide-7">
-                        <img src="./assets/meme-7.jpeg" alt="Лампочка-3" class="item-carousel__img">
+                    <div class="item-carousel hidden" id="slide-5">
+                        <img src="./assets/meme-5.jpeg" alt="Лампочка-3" class="item-carousel__img">
                         <figcaption class="desc-slide">Лампочка-3</figcaption>
+                    </div>
+                    <div class="item-carousel hidden" id="slide-6">
+                        <img src="./assets/meme-6.jpeg" alt="День программиста" class="item-carousel__img">
+                        <figcaption class="desc-slide">День программиста</figcaption>
+                    </div>
+                    <div class="item-carousel hidden"  id="slide-7">
+                        <img src="./assets/meme-7.jpeg" alt="Не работает - работает" class="item-carousel__img">
+                        <figcaption class="desc-slide">Загадка века</figcaption>
                     </div>
                 </div>
             </div>
-            <div class="pagination">
-                <button class="slider-control-pagination active" id="control-1"></button>
-                <button class="slider-control-pagination" id="control-2"></button>
-                <button class="slider-control-pagination" id="control-3"></button>
-                <button class="slider-control-pagination" id="control-4"></button>
-                <button class="slider-control-pagination" id="control-5"></button>
-                <button class="slider-control-pagination" id="control-6"></button>
-                <button class="slider-control-pagination" id="control-7"></button>
+            <div class="controls-block">
+                <div class="pagination">
+                    <button class="slider-control-pagination active" id="control-1">
+                        <div class="control-area"></div>
+                    </button>
+                    <button class="slider-control-pagination" id="control-2">
+                        <div class="control-area"></div>
+                    </button>
+                    <button class="slider-control-pagination" id="control-3">
+                        <div class="control-area"></div>
+                    </button>
+                    <button class="slider-control-pagination" id="control-4">
+                        <div class="control-area"></div>
+                    </button>
+                    <button class="slider-control-pagination" id="control-5">
+                        <div class="control-area"></div>
+                    </button>
+                    <button class="slider-control-pagination" id="control-6">
+                        <div class="control-area"></div>
+                    </button>
+                    <button class="slider-control-pagination" id="control-7">
+                        <div class="control-area"></div>
+                    </button>
+                </div>
             </div>
         </div>
     </main>
+    <script src="index.js"></script>
 </body>
 </html>

@@ -178,7 +178,7 @@ img {
 
 .transition-right {
     animation-name: move-right;
-    animation-duration: 3s;
+    animation-duration: 2s;
 }
 
 @keyframes move-left {
@@ -188,5 +188,5 @@ img {
 
 .transition-left {
     animation-name: move-left;
-    animation-duration: 3s;
+    animation-duration: 2s;
 }

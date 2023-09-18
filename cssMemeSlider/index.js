@@ -169,7 +169,7 @@ CAROUSEL.addEventListener('animationend', (animationEvent) => {
             BTN_FIFTH.addEventListener('click', moveRight);
             BTN_SIXTH.addEventListener('click', moveRight);
             BTN_SEVENTH.addEventListener('click', moveRight);
-        } else if (BTN_SECOND,classList.contains('active')) {
+        } else if (BTN_SECOND.classList.contains('active')) {
             CAROUSEL.classList.remove('transition-left');
             document.querySelector('#slide-0').innerHTML = firstSlide;
             document.querySelector('#slide-1').innerHTML = secondSlide;
@@ -180,7 +180,7 @@ CAROUSEL.addEventListener('animationend', (animationEvent) => {
             BTN_FIFTH.addEventListener('click', moveRight);
             BTN_SIXTH.addEventListener('click', moveRight);
             BTN_SEVENTH.addEventListener('click', moveRight);
-        } else if (BTN_THIRD,classList.contains('active')) {
+        } else if (BTN_THIRD.classList.contains('active')) {
             CAROUSEL.classList.remove('transition-left');
             document.querySelector('#slide-0').innerHTML = secondSlide;
             document.querySelector('#slide-1').innerHTML = thirdSlide;
@@ -191,7 +191,7 @@ CAROUSEL.addEventListener('animationend', (animationEvent) => {
             BTN_FIFTH.addEventListener('click', moveRight);
             BTN_SIXTH.addEventListener('click', moveRight);
             BTN_SEVENTH.addEventListener('click', moveRight);
-        } else if (BTN_FOURTH,classList.contains('active')) {
+        } else if (BTN_FOURTH.classList.contains('active')) {
             CAROUSEL.classList.remove('transition-left');
             document.querySelector('#slide-0').innerHTML = thirdSlide;
             document.querySelector('#slide-1').innerHTML = fourthSlide;
@@ -202,7 +202,7 @@ CAROUSEL.addEventListener('animationend', (animationEvent) => {
             BTN_FIFTH.addEventListener('click', moveRight);
             BTN_SIXTH.addEventListener('click', moveRight);
             BTN_SEVENTH.addEventListener('click', moveRight);
-        } else if (BTN_FIFTH,classList.contains('active')) {
+        } else if (BTN_FIFTH.classList.contains('active')) {
             CAROUSEL.classList.remove('transition-left');
             document.querySelector('#slide-0').innerHTML = fourthSlide;
             document.querySelector('#slide-1').innerHTML = fifthSlide;
@@ -213,7 +213,7 @@ CAROUSEL.addEventListener('animationend', (animationEvent) => {
             BTN_FOURTH.addEventListener('click', moveLeft);
             BTN_SIXTH.addEventListener('click', moveRight);
             BTN_SEVENTH.addEventListener('click', moveRight);
-        } else if (BTN_SIXTH,classList.contains('active')) {
+        } else if (BTN_SIXTH.classList.contains('active')) {
             CAROUSEL.classList.remove('transition-left');
             document.querySelector('#slide-0').innerHTML = fifthSlide;
             document.querySelector('#slide-1').innerHTML = sixthSlide;
@@ -224,7 +224,7 @@ CAROUSEL.addEventListener('animationend', (animationEvent) => {
             BTN_FOURTH.addEventListener('click', moveLeft);
             BTN_FIFTH.addEventListener('click', moveLeft);
             BTN_SEVENTH.addEventListener('click', moveRight);
-        } else if (BTN_SEVENTH,classList.contains('active')) {
+        } else if (BTN_SEVENTH.classList.contains('active')) {
             CAROUSEL.classList.remove('transition-left');
             document.querySelector('#slide-0').innerHTML = sixthSlide;
             document.querySelector('#slide-1').innerHTML = seventhSlide;
@@ -240,7 +240,7 @@ CAROUSEL.addEventListener('animationend', (animationEvent) => {
         if (BTN_FIRST.classList.contains('active')) {
             CAROUSEL.classList.remove('transition-right');
             document.querySelector('#slide-0').innerHTML = firstSlide;
-            document.querySelecror('#slide-1').innerHTML = firstSlide;
+            document.querySelector('#slide-1').innerHTML = firstSlide;
             document.querySelector('#slide-2').innerHTML = secondSlide;
             BTN_SECOND.addEventListener('click', moveRight);
             BTN_FOURTH.addEventListener('click', moveRight);

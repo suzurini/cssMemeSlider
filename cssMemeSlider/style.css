@@ -99,25 +99,26 @@ img {
 
 #slide-2 {
     margin-left: 100%;
-    margin-top: -70%;
+    margin-top: -72%;
 }
 
 #slide-3 {
     margin-left: 200%;
-    margin-top: -70%;
+    margin-top: -72%;
 }
 
 #slide-4 {
     margin-left: 300%;
-    margin-top: -70%;
+    margin-top: -71%;
 }
 
 #slide-5 {
     margin-left: 400%;
-    margin-top: -70%;
+    margin-top: -71%;
 }
 
 .slider>div {
+    width: 90%;
     align-items: center;
     transition: transform 3s;
 }
@@ -212,7 +213,7 @@ img {
 
 .slide-radio5:checked~.slider {
     -webkit-transform: translateX(-400%);
-    transform: translateX(-500%);
+    transform: translateX(-400%);
 }
 
 .slide-radio1:checked~#slide-1 figcaption,

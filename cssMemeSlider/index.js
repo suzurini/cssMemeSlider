@@ -236,3 +236,4 @@ CAROUSEL.addEventListener('animationend', (animationEvent) => {
         BTN_FIFTH.addEventListener('click', moveLeft);
         BTN_SIXTH.addEventListener('click', moveLeft);
     }
+});

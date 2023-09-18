@@ -16,51 +16,7 @@ const fifthSlide = document.querySelector('#slide-5').innerHTML;
 const sixthSlide = document.querySelector('#slide-6').innerHTML;
 const seventhSlide = document.querySelector('#slide-7').innerHTML;
 
-const moveLeft = () => {
-    if (BTN_FIRST.classList.contains('active')) {
-        BTN_FIRST.removeEventListener('click', moveLeft);
-        BTN_FIRST.removeEventListener('click', moveRight);
-    } else if (BTN_SECOND.classList.contains('active')) {
-        CAROUSEL.classList.add('transition-left');
-        BTN_SECOND.classList.remove('active');
-        BTN_FIRST.classList.add('active');
-        BTN_FIRST.removeEventListener('click', moveLeft);
-        BTN_FIRST.removeEventListener('click', moveRight);
-    } else if (BTN_THIRD.classList.contains('active')) {
-        CAROUSEL.classList.add('transition-left');
-        BTN_THIRD.classList.remove('active');
-        BTN_SECOND.classList.add('active');
-        BTN_SECOND.removeEventListener('click', moveLeft);
-        BTN_SECOND.removeEventListener('click', moveRight);
-    } else if (BTN_FOURTH.classList.contains('active')) {
-        CAROUSEL.classList.add('transition-left');
-        BTN_FOURTH.classList.remove('active');
-        BTN_THIRD.classList.add('active');
-        BTN_THIRD.removeEventListener('click', moveLeft);
-        BTN_THIRD.removeEventListener('click', moveRight);
-    } else if (BTN_FIFTH.classList.contains('active')) {
-        CAROUSEL.classList.add('transition-left');
-        BTN_FIFTH.classList.remove('active');
-        BTN_FOURTH.classList.add('active');
-        BTN_FOURTH.removeEventListener('click', moveLeft);
-        BTN_FOURTH.removeEventListener('click', moveRight);
-    } else if (BTN_SIXTH.classList.contains('active')) {
-        CAROUSEL.classList.add('transition-left');
-        BTN_SIXTH.classList.remove('active');
-        BTN_FIFTH.classList.add('active');
-        BTN_FIFTH.removeEventListener('click', moveLeft);
-        BTN_FIFTH.removeEventListener('click', moveRight);
-    } else if (BTN_SEVENTH.classList.contains('active')) {
-        CAROUSEL.classList.add('transition-left');
-        BTN_SEVENTH.classList.remove('active');
-        BTN_SIXTH.classList.add('active');
-        BTN_SIXTH.removeEventListener('click', moveLeft);
-        BTN_SIXTH.removeEventListener('click', moveRight);
-    }
-}
-
 const moveRight = () => {
-    console.log('error after load page');
     if (BTN_FIRST.classList.contains('active')) {
         CAROUSEL.classList.add('transition-right');
         BTN_FIRST.classList.remove('active');
@@ -95,11 +51,54 @@ const moveRight = () => {
         CAROUSEL.classList.add('transition-right');
         BTN_SIXTH.classList.remove('active');
         BTN_SEVENTH.classList.add('active');
-        BTN_SEVENTH.removeEventListener('click', moveLeft);
+        // BTN_SEVENTH.removeEventListener('click', moveLeft);
         BTN_SEVENTH.removeEventListener('click', moveRight);
     } else if (BTN_SEVENTH.classList.contains('active')) {
-        BTN_SEVENTH.removeEventListener('click', moveLeft);
+        // BTN_SEVENTH.removeEventListener('click', moveLeft);
         BTN_SEVENTH.removeEventListener('click', moveRight);
+    }
+}
+
+const moveLeft = () => {
+    if (BTN_FIRST.classList.contains('active')) {
+        BTN_FIRST.removeEventListener('click', moveLeft);
+        // BTN_FIRST.removeEventListener('click', moveRight);
+    } else if (BTN_SECOND.classList.contains('active')) {
+        CAROUSEL.classList.add('transition-left');
+        BTN_SECOND.classList.remove('active');
+        BTN_FIRST.classList.add('active');
+        BTN_FIRST.removeEventListener('click', moveLeft);
+        // BTN_FIRST.removeEventListener('click', moveRight);
+    } else if (BTN_THIRD.classList.contains('active')) {
+        CAROUSEL.classList.add('transition-left');
+        BTN_THIRD.classList.remove('active');
+        BTN_SECOND.classList.add('active');
+        BTN_SECOND.removeEventListener('click', moveLeft);
+        BTN_SECOND.removeEventListener('click', moveRight);
+    } else if (BTN_FOURTH.classList.contains('active')) {
+        CAROUSEL.classList.add('transition-left');
+        BTN_FOURTH.classList.remove('active');
+        BTN_THIRD.classList.add('active');
+        BTN_THIRD.removeEventListener('click', moveLeft);
+        BTN_THIRD.removeEventListener('click', moveRight);
+    } else if (BTN_FIFTH.classList.contains('active')) {
+        CAROUSEL.classList.add('transition-left');
+        BTN_FIFTH.classList.remove('active');
+        BTN_FOURTH.classList.add('active');
+        BTN_FOURTH.removeEventListener('click', moveLeft);
+        BTN_FOURTH.removeEventListener('click', moveRight);
+    } else if (BTN_SIXTH.classList.contains('active')) {
+        CAROUSEL.classList.add('transition-left');
+        BTN_SIXTH.classList.remove('active');
+        BTN_FIFTH.classList.add('active');
+        BTN_FIFTH.removeEventListener('click', moveLeft);
+        BTN_FIFTH.removeEventListener('click', moveRight);
+    } else if (BTN_SEVENTH.classList.contains('active')) {
+        CAROUSEL.classList.add('transition-left');
+        BTN_SEVENTH.classList.remove('active');
+        BTN_SIXTH.classList.add('active');
+        BTN_SIXTH.removeEventListener('click', moveLeft);
+        BTN_SIXTH.removeEventListener('click', moveRight);
     }
 }
 
@@ -155,10 +154,11 @@ BTN_SIXTH.addEventListener('click', function() {
     }
 });
 
-BTN_SEVENTH.addEventListener('click', moveRight());
+BTN_SEVENTH.addEventListener('click', moveRight);
 
-CAROUSEL.addEventListener('animationend', (AnimationEvent) => {
-    if (AnimationEvent.animetionName === "move-left") {
+CAROUSEL.addEventListener('animationend', (animationEvent) => {
+    console.log(animationEvent.animetionName);
+    if (animationEvent.animetionName === "move-left") {
         if (BTN_FIRST.classList.contains('active')) {
             CAROUSEL.classList.remove('transition-left');
             document.querySelector('#slide-1').innerHTML = firstSlide;
@@ -236,7 +236,7 @@ CAROUSEL.addEventListener('animationend', (AnimationEvent) => {
             BTN_SIXTH.addEventListener('click', moveLeft);
         }
     }
-    else if (AnimationEvent.animetionName === "move-right") {
+    else {
         if (BTN_FIRST.classList.contains('active')) {
             CAROUSEL.classList.remove('transition-right');
             document.querySelector('#slide-0').innerHTML = firstSlide;

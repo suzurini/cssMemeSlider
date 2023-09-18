@@ -56,19 +56,17 @@ img {
 }
 
 .slider-wrapper {
-    max-width: 1024px;
-    margin: 0px auto;
+    max-width: 100%;
+    height: 100%;
+    margin: 0vh auto;
     overflow: hidden;
-}
-
-.carousel {
-    position: relative;
+    background-color: #0e0e11;
 }
 
 .meme-carousel {
-    margin: 0px auto;
+    margin: 0 auto;
     width: 90%;
-    padding: 40px 0px;
+    padding: 4vh 0vh 10vh;
     display: flex;
     flex-direction: row;
     justify-content: stretch;
@@ -95,39 +93,44 @@ img {
 }
 
 .item-carousel__img {
-    border-radius: 30px;
-    height: 600px;
+    border-radius: 2vh;
+    height: 85vh;
 }
 
 .desc-slide {
-    padding: 40px 0;
-    font-size: 20px;
+    padding: 4vh 0;
     font-weight: 600;
 }
 
+.controls-block {
+    width: 35%;
+    display: inline;
+}
+
 .pagination {
-    position: relative;
-    margin: -101px 60px;
-    width: 250px;
-    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: -17vh 0vh 0vh 65%;
+    width: 26%;
 }
 
 .slider-control-pagination {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 3vh;
+    height: 3vh;
     border-radius: 50%;
     background-color: #2070c5;
-    border: 1px solid #2070c5;;
+    border: 0.2em solid #2070c5;;
     cursor: pointer;
 }
 
 .slider-control-pagination::before {
     content: '';
     display: inline-block;
-    width: 30px;
-    height: 40px;
-    margin: -12px -18px 20px;
+    width: 4vh;
+    height: 6vh;
+    margin: -2vh -3vh 4vh;
     background: transparent;
     cursor: pointer;
 }
@@ -139,7 +142,7 @@ img {
 
 .slider-control-pagination.active {
     background-color: #0e0e11;
-    border: 2px solid #2070c5;
+    border: 0.2em solid #2070c5;
 }
 
 .slider-control-pagination.active::before {
@@ -147,7 +150,7 @@ img {
 }
 
 @keyframes move-right {
-    from { left: 0px; }
+    from { left: 0vh; }
     to { left: calc(95% * (-1)); }
 }
 
@@ -157,7 +160,7 @@ img {
 }
 
 @keyframes move-left {
-    from { left: 0px; }
+    from { left: 0vh; }
     to { left: calc(105%); }
 }
 
@@ -169,17 +172,11 @@ img {
 @media screen and (max-width: 820px) {
 
     .desc-slide {
-        padding: 75px 0;
-        font-size: 20px;
-        font-weight: 600;
+        padding: 8vh 0vh;
     }
     
     .pagination {
-        position: relative;
-        float: inherit;
-        margin: -185px auto;
-        padding-bottom: 80px;
-        width: 250px;
+        margin: -26vh auto;
     }
 
 }

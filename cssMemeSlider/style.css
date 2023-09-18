@@ -73,6 +73,13 @@ img {
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    -webkit-transition: -webkit-transform 1600ms;
+    transition: -webkit-transform 1600ms, transform 1600ms;
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
 
 .slider .button {
@@ -87,30 +94,27 @@ img {
 
 #slide-1 {
     margin-left: 0%;
+    margin-top: 0%;
 }
 
 #slide-2 {
     margin-left: 100%;
+    margin-top: -70%;
 }
 
 #slide-3 {
     margin-left: 200%;
+    margin-top: -70%;
 }
 
 #slide-4 {
     margin-left: 300%;
+    margin-top: -70%;
 }
 
 #slide-5 {
     margin-left: 400%;
-}
-
-#slide-6 {
-    margin-left: 500%;
-}
-
-#slide-7 {
-    margin-left: 600%;
+    margin-top: -70%;
 }
 
 .slider>div {
@@ -180,9 +184,7 @@ img {
 .slide-radio2:checked~.pagination .page2,
 .slide-radio3:checked~.pagination .page3,
 .slide-radio4:checked~.pagination .page4,
-.slide-radio5:checked~.pagination .page5,
-.slide-radio6:checked~.pagination .page6,
-.slide-radio7:checked~.pagination .page7 {
+.slide-radio5:checked~.pagination .page5 {
     background-color: #0e0e11;
     border: 0.2em solid #2070c5;
     cursor: default;
@@ -213,30 +215,16 @@ img {
     transform: translateX(-500%);
 }
 
-.slide-radio6:checked~.slider {
-    -webkit-transform: translateX(-500%);
-    transform: translateX(-500%);
-}
-
-.slide-radio7:checked~.slider {
-    -webkit-transform: translateX(-600%);
-    transform: translateX(-600%);
-}
-
 .slide-radio1:checked~#slide-1 figcaption,
 .slide-radio2:checked~#slide-2 figcaption,
 .slide-radio3:checked~#slide-3 figcaption,
 .slide-radio4:checked~#slide-4 figcaption,
 .slide-radio5:checked~#slide-5 figcaption,
-.slide-radio6:checked~#slide-6 figcaption,
-.slide-radio7:checked~#slide-7 figcaption,
 .slide-radio1:checked~#slide-1 .button,
 .slide-radio2:checked~#slide-2 .button,
 .slide-radio3:checked~#slide-3 .button,
 .slide-radio4:checked~#slide-4 .button,
-.slide-radio5:checked~#slide-5 .button,
-.slide-radio6:checked~#slide-6 .button,
-.slide-radio7:checked~#slide-7 .button  {
+.slide-radio5:checked~#slide-5 .button {
     -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1

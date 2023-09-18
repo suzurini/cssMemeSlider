@@ -64,28 +64,18 @@ img {
 }
 
 .meme-carousel {
-    margin: 0 auto;
-    width: 90%;
-    padding: 4vh 0vh 10vh;
+    width: 300%;
+    margin-left: -100%;
+    padding: 4vh 0% 10vh;
     display: flex;
     flex-direction: row;
-    justify-content: stretch;
+    justify-content: space-between;
+    gap: 10%;
 }
 
 .item-carousel {
-    width: 90%;
     height: auto;
-    margin: 0px auto;
-}
-
-#slide-0 {
-    position: absolute;
-    margin-left: -110%;
-}
-
-#slide-2 {
-    position: absolute;
-    margin-left: 110%;
+    width: 100%;
 }
 
 .hidden {
@@ -94,7 +84,8 @@ img {
 
 .item-carousel__img {
     border-radius: 2vh;
-    height: 85vh;
+    height: 70vh;
+    margin: 0% auto;
 }
 
 .desc-slide {
@@ -143,8 +134,8 @@ img {
 }
 
 @keyframes move-right {
-    from { left: 0vh; }
-    to { left: calc(95% * (-1)); }
+    from { margin-left: -100%; }
+    to { margin-left: -210%; }
 }
 
 .transition-right {
@@ -153,8 +144,8 @@ img {
 }
 
 @keyframes move-left {
-    from { left: 0vh; }
-    to { left: calc(105%); }
+    from { margin-left: -100%; }
+    to { margin-left: 10%; }
 }
 
 .transition-left {

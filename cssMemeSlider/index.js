@@ -111,7 +111,7 @@ BTN_SECOND.addEventListener('click', function() {
 });
 
 BTN_THIRD.addEventListener('click', function() {
-    if (BTN_SECOND.classList.contains('active')) { 
+    if (BTN_SECOND.classList.contains('active') || BTN_FIRST.classList.contains('active') ) { 
         moveRight(); 
     } else if (BTN_THIRD.classList.contains('active')) { 
         // nothing
@@ -121,7 +121,7 @@ BTN_THIRD.addEventListener('click', function() {
 });
 
 BTN_FOURTH.addEventListener('click', function() {
-    if (BTN_THIRD.classList.contains('active')) { 
+    if (BTN_THIRD.classList.contains('active') || BTN_SECOND.classList.contains('active') || BTN_FIRST.classList.contains('active')) { 
         moveRight(); 
     } else if (BTN_FOURTH.classList.contains('active')) { 
         // nothing
@@ -131,7 +131,7 @@ BTN_FOURTH.addEventListener('click', function() {
 });
 
 BTN_FIFTH.addEventListener('click', function() {
-    if (BTN_FOURTH.classList.contains('active')) { 
+    if (BTN_FOURTH.classList.contains('active') || BTN_THIRD.classList.contains('active') || BTN_SECOND.classList.contains('active') || BTN_FIRST.classList.contains('active')) { 
         moveRight(); 
     } else if (BTN_FIFTH.classList.contains('active')) { 
         // nothing
@@ -141,7 +141,7 @@ BTN_FIFTH.addEventListener('click', function() {
 });
 
 BTN_SIXTH.addEventListener('click', function() {
-    if (BTN_FIFTH.classList.contains('active')) { 
+    if (BTN_FIFTH.classList.contains('active') || BTN_FOURTH.classList.contains('active') || BTN_THIRD.classList.contains('active') || BTN_SECOND.classList.contains('active') || BTN_FIRST.classList.contains('active')) { 
         moveRight(); 
     } else if (BTN_SIXTH.classList.contains('active')) { 
         // nothing

@@ -1,11 +1,7 @@
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
-}
-
-*::before, *::after {
-    box-sizing: inherit;
-}
+} 
 
 @media screen and (prefers-reduced-motion: reduce) {
 

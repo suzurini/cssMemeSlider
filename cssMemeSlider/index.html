@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Meme Slider">
+    <link rel="icon" href="./assets/favicon.ico">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Slider</title>
+</head>
+<body>
+    <header class="header container">
+        <h1 class="name-site">Meme Slider</h1>
+    </header>
+    <main class="main container">
+        <section class="section meme-slider slider-wrapper">    
+            <input type="radio" class="slide-radio1 hidden" name="slider" checked id="control-1">
+            <input type="radio" class="slide-radio2 hidden" name="slider" id="control-2">
+            <input type="radio" class="slide-radio3 hidden" name="slider" id="control-3">
+            <input type="radio" class="slide-radio4 hidden" name="slider" id="control-4">
+            <input type="radio" class="slide-radio5 hidden" name="slider" id="control-5">
+            
+            <div class="item-carousel slider slide-1">
+                <div>
+                    <img src="./assets/meme-1.jpeg" alt="Разработчик-тестировщик" class="item-carousel__img">
+                    <figcaption class="desc-slide">Разработчик vs тестировщик</figcaption>
+                </div>
+            </div>
+            <div class="item-carousel slider slide-2">
+                <div>
+                    <img src="./assets/meme-2.jpeg" alt="Пользователи" class="item-carousel__img">
+                    <figcaption class="desc-slide">Разработчики vs Пользователи</figcaption>
+                </div>
+            </div>
+            <div class="item-carousel slider slide-3">
+                <div>
+                    <img src="./assets/meme-3.jpeg" alt="Лампочка-1" class="item-carousel__img">
+                <figcaption class="desc-slide">Лампочка-1</figcaption>
+                </div>
+            </div>
+            <div class="item-carousel slider slide-4">
+                <div>
+                    <img src="./assets/meme-4.jpeg" alt="Лампочка-2" class="item-carousel__img">
+                    <figcaption class="desc-slide">Лампочка-2</figcaption>
+                </div>
+            </div>
+            <div class="item-carousel slider slide-5">
+                <div>
+                    <img src="./assets/meme-5.jpeg" alt="Лампочка-3" class="item-carousel__img">
+                    <figcaption class="desc-slide">Лампочка-3</figcaption>    
+                </div>
+            </div>
+            <div class="pagination">
+                <label for="control-1" class="page1 slider-control-pagination">
+                    <div class="control-area"></div>
+                </label>
+                <label for="control-2" class="page2 slider-control-pagination">
+                    <div class="control-area"></div>
+                </label>
+                <label for="control-3" class="page3 slider-control-pagination">
+                    <div class="control-area"></div>
+                </label>
+                <label for="control-4" class="page4 slider-control-pagination">
+                    <div class="control-area"></div>
+                </label>
+                <label for="control-5" class="page5 slider-control-pagination">
+                    <div class="control-area"></div>
+                </label>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

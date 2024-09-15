@@ -199,37 +199,14 @@ header.header img {
     cursor: default;
 }
 
-.slide-radio1:checked~.slide-1 {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-    height: auto;
-    overflow: visible;
-}
-
-.slide-radio2:checked~.slide-2 {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-    height: auto;
-    overflow: visible;
-}
-
-.slide-radio3:checked~.slide-3 {
-    -webkit-transform: translateX(-200%);
-    transform: translateX(-200%);
-    height: auto;
-    overflow: visible;
-}
-
-.slide-radio4:checked~.slide-4 {
-    -webkit-transform: translateX(-300%);
-    transform: translateX(-300%);
-    height: auto;
-    overflow: visible;
-}
-
+.slide-radio1:checked~.slide-1,
+.slide-radio2:checked~.slide-2 ,
+.slide-radio3:checked~.slide-3 ,
+.slide-radio4:checked~.slide-4,
 .slide-radio5:checked~.slide-5 {
-    -webkit-transform: translateX(-400%);
-    transform: translateX(-400%);
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
     height: auto;
     overflow: visible;
 }

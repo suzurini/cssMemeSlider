@@ -283,7 +283,7 @@ header.header img {
 
     .item-carousel__img {
         border-radius: 2vh;
-        height: 60vh;
+        height: auto;
     }
     
     .pagination {

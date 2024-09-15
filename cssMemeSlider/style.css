@@ -18,7 +18,7 @@ html {
 body {
     font-family: 'Courier New', Courier, monospace;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.3em;
     color: #ffffff;
     background-color: #f5f5f5;
 }
@@ -29,28 +29,27 @@ img {
 }
 
 .container {
-    max-width: 1024px;
-    width: 100%;
-    margin: 0px auto;
+    max-width: 80vw;
+    margin: 0 auto;
 }
 
 .header {
-    height: 80px;
+    height: 4em;
     display: flex;
     background-color: #0C0C0E;
 }
 
 header.header img {
-    width: 40px;
-    height: 40px;
-    padding-right: 40px;
+    width: 1.5em;
+    height: 1.5em;
+    padding-right: 1em;
 }
 
 .name-site {
-    width: 340px;
-    margin: 0px auto;
-    padding: 20px;
-    font-size: 30px;
+    width: 40vw;
+    margin: 0 auto;
+    padding: 1em;
+    font-size: 2em;
     font-weight: 700;
     letter-spacing: 0.03em;
     display: flex;
@@ -58,11 +57,11 @@ header.header img {
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-bottom: 4px solid #ffffff;
+    border-bottom: 0.1em solid #ffffff;
 }
 
 .main {
-    padding-top: 2em;
+    padding-top: 1.4em;
     background-color: #0e0e11;
 }
 
@@ -116,6 +115,13 @@ header.header img {
     margin-left: 400%;
 }
 
+.slider-names {
+    height: 2em;
+    overflow: hidden;
+    display: block;
+    position: static;
+}
+
 .slider>div {
     width: 90%;
     display: flex;
@@ -131,12 +137,12 @@ header.header img {
     align-items: flex-start;
     justify-content: space-between;
     width: 90%;
-    margin: 20px auto;
+    margin: 1.4em auto;
 }
 
 .desc-slide {
-    padding: 4vh 0;
     font-weight: 600;
+    opacity: 0;
 }
 
 .hidden {
@@ -145,19 +151,8 @@ header.header img {
 
 .slider-info .slider-names .caption__wrapper .desc-slide {
     opacity: 0;
-    -webkit-transform: translateX(500px);
-    transform: translateX(500px);
-    width: 50%;
     -webkit-transition: opacity 800ms, -webkit-transform 800ms;
     transition: transform 800ms, opacity 800ms;
-    -webkit-transition-delay: 1s;
-    transition-delay: 1s;
-}
-
-.pagination {
-    display: inline-block;
-    width: 50%;
-    /* margin: 0em 0em 0em 70%; */
 }
 
 .pagination label .control-area {
@@ -168,30 +163,32 @@ header.header img {
     display: inline-block;
     width: 3vh;
     height: 3vh;
-    border-radius: 50%;
-    background-color: #2070c5;
-    border: 0.2em solid #2070c5;
     cursor: pointer;
 }
 
 .control-area {
     display: block;
-    width: 2em;
-    margin-bottom: 3em;
+    width: 2vh;
+    height: 2vh;
+    border-radius: 50%;
+    background-color: #2070c5;
+    border: 0.2em solid #2070c5;
 }
 
-.slider-control-pagination:hover {
+.slider-control-pagination:hover .control-area{
     background-color: #f5f5f5;
+    border-radius: 50%;
     border-color: #f5f5f5;
 }
 
-.slide-radio1:checked~.pagination .page1,
-.slide-radio2:checked~.pagination .page2,
-.slide-radio3:checked~.pagination .page3,
-.slide-radio4:checked~.pagination .page4,
-.slide-radio5:checked~.pagination .page5 {
+.slide-radio1:checked~.slider-info .pagination .page1 .control-area,
+.slide-radio2:checked~.slider-info .pagination .page2 .control-area,
+.slide-radio3:checked~.slider-info .pagination .page3 .control-area,
+.slide-radio4:checked~.slider-info .pagination .page4 .control-area,
+.slide-radio5:checked~.slider-info .pagination .page5 .control-area {
     background-color: #0e0e11;
     border: 0.2em solid #2070c5;
+    border-radius: 50%;
     cursor: default;
 }
 
@@ -230,14 +227,35 @@ header.header img {
     overflow: visible;
 }
 
-.slide-radio1:checked~.slide-1 .desc-slide,
-.slide-radio2:checked~.slide-2 .desc-slide,
-.slide-radio3:checked~.slide-3 .desc-slide,
-.slide-radio4:checked~.slide-4 .desc-slide,
-.slide-radio5:checked~.slide-5 .desc-slide {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1
+.slide-radio1:checked~.slider-info .slider-names .slide-name-1 .desc-slide {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    transition: 1s ease;
+    opacity: 1;
+}
+.slide-radio2:checked~.slider-info .slider-names .slide-name-2 .desc-slide {
+    -webkit-transform: translateY(-1em);
+    transform: translateY(-1em);
+    transition: 1s ease;
+    opacity: 1;
+}
+.slide-radio3:checked~.slider-info .slider-names .slide-name-3 .desc-slide {
+    -webkit-transform: translateY(-2em);
+    transform: translateY(-2em);
+    transition: 1s ease;
+    opacity: 1;
+}
+.slide-radio4:checked~.slider-info .slider-names .slide-name-4 .desc-slide {
+    -webkit-transform: translateY(-3em);
+    transform: translateY(-3em);
+    transition: 1s ease;
+    opacity: 1;
+}
+.slide-radio5:checked~.slider-info .slider-names .slide-name-5 .desc-slide {
+    -webkit-transform: translateY(-4em);
+    transform: translateY(-4em);
+    transition: 1s ease;
+    opacity: 1;
 }
 
 

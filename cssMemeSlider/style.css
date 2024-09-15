@@ -36,8 +36,14 @@ img {
 
 .header {
     height: 80px;
-    text-align: left;
+    display: flex;
     background-color: #0C0C0E;
+}
+
+header.header img {
+    width: 40px;
+    height: 40px;
+    padding-right: 40px;
 }
 
 .name-site {
@@ -47,8 +53,12 @@ img {
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 0.03em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 4px solid #ffffff;
 }
 
 .main {
@@ -108,8 +118,20 @@ img {
 
 .slider>div {
     width: 90%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     transition: transform 3s;
+}
+
+.slider-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px auto;
 }
 
 .desc-slide {
@@ -121,7 +143,7 @@ img {
     display: none;
 }
 
-.slider figcaption {
+.slider-info .slider-names .caption__wrapper .desc-slide {
     opacity: 0;
     -webkit-transform: translateX(500px);
     transform: translateX(500px);
@@ -135,7 +157,7 @@ img {
 .pagination {
     display: inline-block;
     width: 50%;
-    margin: -6em 0em 0em 70%;
+    /* margin: 0em 0em 0em 70%; */
 }
 
 .pagination label .control-area {
@@ -208,11 +230,11 @@ img {
     overflow: visible;
 }
 
-.slide-radio1:checked~.slide-1 figcaption,
-.slide-radio2:checked~.slide-2 figcaption,
-.slide-radio3:checked~.slide-3 figcaption,
-.slide-radio4:checked~.slide-4 figcaption,
-.slide-radio5:checked~.slide-5 figcaption {
+.slide-radio1:checked~.slide-1 .desc-slide,
+.slide-radio2:checked~.slide-2 .desc-slide,
+.slide-radio3:checked~.slide-3 .desc-slide,
+.slide-radio4:checked~.slide-4 .desc-slide,
+.slide-radio5:checked~.slide-5 .desc-slide {
     -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1

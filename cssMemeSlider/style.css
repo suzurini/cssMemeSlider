@@ -1,0 +1,293 @@
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-size: 1.3em;
+    color: #ffffff;
+    background-color: #f5f5f5;
+    height: 100vh;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: calc(100% - 4em - 1.4em);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.header {
+    height: 3.5em;
+    display: flex;
+    background-color: #0C0C0E;
+}
+
+header.header img {
+    width: 1.5em;
+    height: 1.5em;
+    padding-right: 1em;
+}
+
+.name-site {
+    width: 40vw;
+    margin: 0 auto;
+    padding: 1em;
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 0.1em solid #ffffff;
+}
+
+.main {
+    padding-top: 1.4em;
+    background-color: #0e0e11;
+}
+
+.slider-wrapper {
+    display: block;
+    overflow: hidden;
+    background-color: #0e0e11;
+}
+
+.item-carousel__img {
+    border-radius: 2vh;
+    width: 60vw;
+    height: 70vh;
+}
+
+.slider {
+    width: 100%;
+    height: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    pointer-events: none;
+    overflow: hidden;
+    -webkit-transition: -webkit-transform 1600ms;
+    transition: -webkit-transform 1600ms, transform 1600ms;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.slide-1 {
+    margin-left: 0%;
+}
+
+.slide-2 {
+    margin-left: 100%;
+}
+
+.slide-3 {
+    margin-left: 200%;
+}
+
+.slide-4 {
+    margin-left: 300%;
+}
+
+.slide-5 {
+    margin-left: 400%;
+}
+
+.slider-names {
+    height: 2em;
+    padding: 0.8em 0 0 0;
+    overflow: hidden;
+    display: block;
+    position: static;
+}
+
+.slider>div {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 3s;
+}
+
+.slider-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.desc-slide {
+    font-weight: 600;
+    opacity: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.slider-info .slider-names .caption__wrapper .desc-slide {
+    opacity: 0;
+    -webkit-transition: opacity 800ms, -webkit-transform 800ms;
+    transition: transform 800ms, opacity 800ms;
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    gap: 0.03em;
+}
+
+.slider-control-pagination {
+    display: inline-block;
+    padding: 0.8em 0.2em;
+    cursor: pointer;
+}
+
+.control-area {
+    width: 0.7em;
+    height: 0.7em;
+    border-radius: 50%;
+    background-color: #2070c5;
+    border: 0.2em solid #2070c5;
+}
+
+.slider-control-pagination:hover .control-area{
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    border-color: #f5f5f5;
+}
+
+.slider-control-pagination:active .control-area{
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    border-color: #2070c5;
+}
+
+.slide-radio1:checked~.slider-info .pagination .page1:hover .control-area,
+.slide-radio2:checked~.slider-info .pagination .page2:hover .control-area,
+.slide-radio3:checked~.slider-info .pagination .page3:hover .control-area,
+.slide-radio4:checked~.slider-info .pagination .page4:hover .control-area,
+.slide-radio5:checked~.slider-info .pagination .page5:hover .control-area {
+    border-color: #f5f5f5;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slide-radio1:checked~.slider-info .pagination .page1 .control-area,
+.slide-radio2:checked~.slider-info .pagination .page2 .control-area,
+.slide-radio3:checked~.slider-info .pagination .page3 .control-area,
+.slide-radio4:checked~.slider-info .pagination .page4 .control-area,
+.slide-radio5:checked~.slider-info .pagination .page5 .control-area {
+    background-color: #0e0e11;
+    border: 0.2em solid #2070c5;
+    border-radius: 50%;
+    cursor: default;
+}
+
+.slide-radio1:checked~.slide-1,
+.slide-radio2:checked~.slide-2 ,
+.slide-radio3:checked~.slide-3 ,
+.slide-radio4:checked~.slide-4,
+.slide-radio5:checked~.slide-5 {
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: auto;
+    overflow: visible;
+}
+
+.slide-radio1:checked~.slider-info .slider-names .slide-name-1 .desc-slide {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    transition: 1s ease;
+    opacity: 1;
+}
+.slide-radio2:checked~.slider-info .slider-names .slide-name-2 .desc-slide {
+    -webkit-transform: translateY(-1em);
+    transform: translateY(-1em);
+    transition: 1s ease;
+    opacity: 1;
+}
+.slide-radio3:checked~.slider-info .slider-names .slide-name-3 .desc-slide {
+    -webkit-transform: translateY(-2em);
+    transform: translateY(-2em);
+    transition: 1s ease;
+    opacity: 1;
+}
+.slide-radio4:checked~.slider-info .slider-names .slide-name-4 .desc-slide {
+    -webkit-transform: translateY(-3em);
+    transform: translateY(-3em);
+    transition: 1s ease;
+    opacity: 1;
+}
+.slide-radio5:checked~.slider-info .slider-names .slide-name-5 .desc-slide {
+    -webkit-transform: translateY(-4em);
+    transform: translateY(-4em);
+    transition: 1s ease;
+    opacity: 1;
+}
+
+
+@media screen and (width < 821px) {
+
+    body {
+        background-color: dimgray;
+    }
+
+    .header {
+        height: 3em;
+    }
+
+    .name-site {
+        font-size: 1.5em;
+        margin-top: 0.3em;
+        border-bottom: 0px solid transparent;
+    }
+
+    .container {
+        max-width: 80vw;
+        max-height: 80vh;
+    }
+
+    .slider-names {
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .slider>div {
+        width: 90%;
+    }
+
+    .slider-info {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 90%;
+    }
+
+    .item-carousel__img {
+        border-radius: 2vh;
+        height: 55vh;
+    }
+    
+    .pagination {
+        height: 2.8em;
+    }
+
+}

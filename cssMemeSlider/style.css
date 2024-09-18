@@ -3,10 +3,6 @@ html {
     box-sizing: border-box;
 }
 
-*::before, *::after {
-    box-sizing: inherit;
-}
-
 @media screen and (prefers-reduced-motion: reduce) {
 
     html {
@@ -184,6 +180,12 @@ header.header img {
     background-color: #f5f5f5;
     border-radius: 50%;
     border-color: #f5f5f5;
+}
+
+.slider-control-pagination:active .control-area{
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    border-color: #2070c5;
 }
 
 .slide-radio1:checked~.slider-info .pagination .page1:hover .control-area,
